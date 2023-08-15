@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(30, 8, 56);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 75px;
+    
+  
+}
+
+.today {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+img {
+    width: 10%;
+    padding-bottom: 20px;
+}
+
+.add-control {
+    margin-bottom: 15px;
+}
+
+
+.list {
+    list-style: none;  
+    padding-left: 0;
+}
+
+
+.item  {
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    background-color: white;
+    border-radius: 5px;
+    font-size:small;
+    color: black;
+}
+
+.highlight {
+    background-color: rgb(185, 105, 255);
+    color: white;
+}
+
+.checkBox {
+    margin-right:10px ;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: rgb(135, 131, 139);
+}
