@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %>
+    
+    <div class="container new-list">
+        <h6>Start your customize list here 👇 !</h6>
+        <form class="row g-3 new-list-form" action="/addlist" method="post">
+            <div class="col-lg-8 col-sm-12">
+                <label for="listName" class="visually-hidden">list name</label>
+                <input type="text" class="form-control" id="listName" name="listName" placeholder="e.g.Work">
+              </div>
+              <div class="col-lg-4 col-sm-12">
+                <button type="submit" class="btn btn-primary mb-3">Create</button>
+              </div>
+        </form>
+    </div>
+
+<%- include('partials/footer.ejs') %>

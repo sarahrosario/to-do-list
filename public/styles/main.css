@@ -4,6 +4,21 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 }
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.list-title{
+    
+    color: rgb(210, 174, 244);
+    
+    font-size: large;
+    font-weight: bold;
+    
+    
+   
+}
 
 .container{
 
@@ -15,10 +30,13 @@ body {
   
 }
 
-.today {
+.new-list {
     text-align: center;
-    margin-bottom: 20px;
+    align-items: center;
+    height: 80vh;
 }
+
+
 
 
 img {
@@ -58,9 +76,18 @@ img {
     margin-right:10px ;
 }
 
+.new-list-form {
+    margin-top: 20px;
+}
+
+.remove-button {
+    margin-top: 30px;
+    text-align: center;
+}
 .footer {
-    position: fixed;
-    bottom: 0;
+    /* position: fixed; */
+    /* bottom: 20px; */
+    margin-top: 20px;
     width: 100%;
     text-align: center;
     color: rgb(135, 131, 139);
