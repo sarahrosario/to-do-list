@@ -31,11 +31,20 @@ Before you begin, ensure you have met the following requirements:
 ## Installation
 
 1. Clone the repository:
-
 ```sh
 $ git clone https://github.com/sarahrosario/to-do-list.git
+```
+2. Navigate into the repository's directory:
+```sh
 $ cd to-do-list
+```
+3.Install dependencies:
+
+```sh
 $ npm install
+```
+4.Run the server:
+```sh
 $ node index.js
 ```
 
