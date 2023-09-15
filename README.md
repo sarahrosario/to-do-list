@@ -2,7 +2,6 @@
 
 A simple web-based To-Do List application built using Express.js and MongoDB with Mongoose.
 
-# Live Demo
 ![App Screenshot](Screenshot.png)
 
 ## Table of Contents
@@ -38,12 +37,11 @@ $ git clone https://github.com/sarahrosario/to-do-list.git
 ```sh
 $ cd to-do-list
 ```
-3.Install dependencies:
-
+3. Install dependencies:
 ```sh
 $ npm install
 ```
-4.Run the server:
+4. Run the server:
 ```sh
 $ node index.js
 ```
