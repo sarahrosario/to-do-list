@@ -3,7 +3,7 @@
 A simple web-based To-Do List application built using Express.js and MongoDB with Mongoose.
 
 # Live Demo
-![App Screenshot](screenshot.png)
+![App Screenshot](Screenshot.png)
 
 ## Table of Contents
 - [Features](#features)
