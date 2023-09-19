@@ -1,15 +1,22 @@
 
+import 'dotenv/config'
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose'
 
+// test if environment var is set up
+console.log(process.env)
+
 // start our server at port 3000
 const app = express();
 const port = 3000;
+//  link of mongoDB atlas cloud service
+const uri = process.env.URI;
 
 const today = [];
 const work = [];
 const date = new Date();
+
 
 function getYear() {
     return date.getFullYear();
@@ -38,7 +45,10 @@ function capitalize(str) {
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/todolistDB');
+//   local mongoDB
+//   await mongoose.connect('mongodb://127.0.0.1:27017/todolistDB');
+// upgrade to clould service:
+await mongoose.connect(uri);
 }
 
 //--------------------       item  collection      ---------------------
@@ -119,32 +129,32 @@ app.get("/customize", async(req,res) => {
 
 // route to custom list 
 app.get('/:customListName', async(req,res)=> {
-    const customLists = await List.find();
-    // get list name
-    const listName = await req.params.customListName;
-    console.log(listName)
-    if (listName !=="favicon.ico"){
-        try{
+    try{
+        const customLists = await List.find();
+        // get list name
+        const listName = req.params.customListName;
+        console.log("list name:"+listName);
         // find list by name
         const foundList= await List.findOne({ name: listName});
-        console.log(foundList.items);
-        res.render("index.ejs",{
-                    customLists : customLists,
-                    listItems:foundList.items,
-                    week : getWeek(),
-                    dateTime : getDateTime(),
-                    listTitle: foundList.name ,
-                    currentYear : getYear()
-                });
-        }catch(err) {
-            console.log(err)
+        if (foundList){
+            //render the list if found
+            res.render("index.ejs",{
+                        customLists : customLists,
+                        listItems:foundList.items,
+                        week : getWeek(),
+                        dateTime : getDateTime(),
+                        listTitle: foundList.name ,
+                        currentYear : getYear()
+                    });
+            
+        }else{
+            // handle the case where the list was not found
+            console.log("list not found:" + listName);
+            res.redirect("/");
         }
-
-    }else{
-        res.redirect("/");
+    }catch(err){
+        console.log(err)
     }
-    
-    
 });
 
 // route to add item

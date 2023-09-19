@@ -67,14 +67,13 @@ img {
     color: black;
 }
 
-.highlight {
-    background-color: rgb(185, 105, 255);
-    color: white;
-}
-
 .checkBox {
     margin-right:10px ;
 }
+
+.checkBox:checked+label.checkBox-text {
+    text-decoration: line-through;
+  }
 
 .new-list-form {
     margin-top: 20px;

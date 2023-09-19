@@ -23,7 +23,7 @@
                         <% listItems.forEach((item)=>{ %>
                          <form method="post" action="/delete">
                             <li class="list-group-item <%= item.id %> item">
-                                <input class="form-check-input checkBox" type="checkbox" id="<%= item.id %>" name="checkbox" value="<%= item.id %>" onChange="submit()" onclick="crossOff('<%= item.id %>')" > 
+                                <input class="form-check-input checkBox" type="checkbox" id="<%= item.id %>" name="checkbox" value="<%= item.id %>" onChange="submit()"  > 
                                 <label class="form-check-label checkBox-text" for="<%= item.id %>" > <%= item.name %></label>
                             </li>
                             <div>
